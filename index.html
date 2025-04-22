@@ -4,49 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro de Alumnos</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <h1>Registro de Alumnos</h1>
-    
-    <!-- SECCIÓN DE BÚSQUEDA INICIAL -->
+    <button id="botonVerPlanillaHeader" class="btn-planilla-header">Ver Planilla Completa</button>
     <div id="busquedaInicial">
         <input type="text" id="nombre" placeholder="Nombre" autocomplete="off">
         <input type="text" id="apellido" placeholder="Apellido" autocomplete="off">
         <button id="botonBuscar">Buscar</button>
     </div>
     
-    <!-- SECCIÓN QUE SE MUESTRA CUANDO SE ENCUENTRA UN ALUMNO -->
-    <div id="alumnoEncontrado" style="display: none;">
+    <div id="alumnoEncontrado" class="hidden">
         <div id="infoAlumnoEncontrado"></div>
         <div class="botones">
             <button id="botonVerPlanilla">Ver Planilla</button>
+            <button id="botonEditarAlumno">Editar</button>
             <button id="botonNuevaBusqueda">Nueva Búsqueda</button>
         </div>
     </div>
     
-    <!-- SECCIÓN QUE SE MUESTRA CUANDO NO SE ENCUENTRA UN ALUMNO -->
-    <div id="alumnoNoEncontrado" style="display: none;">
+    <div id="alumnoNoEncontrado" class="hidden">
         <p>Alumno no encontrado</p>
         <button id="botonAgregarNuevoAlumno">Agregar alumno nuevo</button>
     </div>
     
-    <!-- FORMULARIO PARA REGISTRAR UN NUEVO ALUMNO -->
-    <div id="formularioRegistro" style="display: none;">
+    <div id="formularioRegistro" class="hidden">
         <input type="text" id="curso" placeholder="Curso que realiza" autocomplete="off">
         <select id="estadoCurso">
             <option value="en curso">En curso</option>
             <option value="aprobado">Aprobado</option>
         </select>
         <select id="estadoPago">
-            <option value="pago efectuado">Pago efectuado</option>
             <option value="pago pendiente">Pago pendiente</option>
+            <option value="pago efectuado">Pago efectuado</option>
         </select>
         <button id="botonConfirmarRegistro">Agregar al sistema</button>
     </div>
     
-    <!-- SECCIÓN DONDE SE MUESTRA LA PLANILLA COMPLETA DEL ALUMNO -->
-    <div id="planillaCompleta" style="display: none;"></div>
+    <div id="planillaCompleta" class="hidden"></div>
 
-    <script src="main.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
